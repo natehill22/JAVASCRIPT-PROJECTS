@@ -24,3 +24,27 @@ var Sent1 = "This is the beginning of the string"; //Defining the Sent1 variable
 var Sent2 = " and this is the end of the string"; //Defining the Sent2 variable as a string
 document.write("<br>"); //Adding a line break
 document.write(Sent1 + Sent2); //Calling and concatenating the Sent1 and Sent2 variables into one string
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    const myButton = document.getElementById('myButton');
+
+        myButton.addEventListener('click', function() {
+            console.log('Button clicked using addEventListener!');
+    });
+});
+
+function handleKeyDown(event) {
+    console.log("Key pressed:", event.key);
+    if (event.key === "Enter") {
+      alert("You pressed Enter!");
+    }
+  }
+
+function myFunction() {
+    console.log("WAAAAA!!! Mouse left the div!");
+}
+
+function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+}
