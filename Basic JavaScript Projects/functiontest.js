@@ -7,7 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("mult").innerHTML = "The result is: " + result;
 });
 
-function addFunction() {
+/* function addFunction() {
     var addition = 2 + 2;
     document.getElementById("add").innerHTML = "2 + 2 = " + addition;
+} */
+
+function addFunction() {
+    document.getElementById("add").innerHTML = isNaN(7);
 }
+
+document.write(2E310);
