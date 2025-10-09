@@ -2,11 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <script src="JS/main.js"></script>
     </head>
     <body>
         <p id="Greeting" onclick="get_Date()">Click for greeting</p><br> <!--Gives a custom message depending on the time of day users access the program-->
-        <p id="rando" onclick="NumAssign()">Click for random number</p> <!--Assigns a random number and a custom message. This can be performed multiple times-->
+        <p id="rando" onclick="NumAssign()">Click for random number</p><br> <!--Assigns a random number and a custom message. This can be performed multiple times-->
         <section>
             <p>This is a Coin Flip Program. Please enter either "Heads" or "Tails" in the box below:</p>
             <input id="Guess" value=""> <!--Users will input their guess for the coin flip here-->
@@ -18,5 +17,6 @@
             <p id="Time_of_day"></p> <!--This paragraph turns into a display for the Time of Day based on the users' time of day-->
             <button onclick="Time_function()">Time stuff</button> <!--Button to start the function-->
         </section>
+        <script src="JS/main.js"></script>
     </body>
 </html>

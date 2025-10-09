@@ -22,6 +22,7 @@ console.log(now.toLocaleTimeString()); //This code is for testing the function b
 */
 
 function get_Date() {
+    var now = new Date();
     if (now.getHours() < 18) { //Pulls in the current hour of today using the new Date() function. If current hour is under 18 (6pm), sends out a daytime greeting.
         document.getElementById("Greeting").innerHTML = "How are you today?";
     } else { //Otherwise this function, sends out a evening time greeting.
@@ -56,6 +57,7 @@ function coinFlip() {
 }
 
 function Time_function() {
+    var now = new Date();
     var Time = now.getHours(); //Pulls in the current hour of today using the new Date() function.
     var Reply;
     if (Time < 12 && Time > 0) { //If current hour above 0 AND under 12, the Reply variable gets loaded with a daytime greeting.
