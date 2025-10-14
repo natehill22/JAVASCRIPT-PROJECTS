@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="JS/main.js" defer></script>
+    </head>
+    <body>
+        <section>
+        <p id="Loop"></p> <!--Displays the values determined by the Call_Loop function-->
+        <button onclick="Call_Loop()">Click here to execute loop</button> <!--Starts the function-->
+        </section>
+        <section>
+            <p id="List_of_Instruments"></p> <!--Displays the values determined by the for_Loop function-->
+            <button onclick="for_Loop()">For Loop</button> <!--Starts the function-->
+        </section>
+        <section>
+            <p id="ArrayList"></p> <!--Displays all the array values determined in the array_Function function-->
+            <button onclick="array_Function()">Array time!</button> <!--Starts the function-->
+            <p id="Array"></p> <!--Displays the selection from the array_Function function-->
+        </section>
+        <section>
+            <p id="Constant"></p> <!--Displays the value determined in the constant_Function function-->
+            <button onclick="constant_Function()">Constantly...</button> <!--Starts the function-->
+        </section>
+        <section>
+            <p>Please input your age.</p>
+            <input id="age" value=""> <!--The user will input a value to be used in the if condition-->
+            <p id="returns"></p> <!--Displays the value determined in the voterAge function-->
+            <button onclick="checkAge()">Age Return</button> <!--Starts the function-->
+        </section>
+        <section>
+            <p id="Car_Object"></p> <!--Displays the value determined in the Car_Object function-->
+        </section>
+    </body>
+
+</html>
