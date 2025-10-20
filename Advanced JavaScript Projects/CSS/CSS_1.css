@@ -1,0 +1,80 @@
+body {
+    width: 40%;
+    display: block;
+    margin: 0 auto; /*Center aligned*/
+    background-image: url("../Images/formback.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h2 {
+    text-align: center; 
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+
+.column { /*Setting the 4 inputs to show in two equal columns in stacks of 2*/
+    flex: 1; /*Forces columns to take equal screen width*/
+    display: flex; /*Allows elements within the column to stack vertically*/
+    flex-direction: column;
+}
+
+form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 18px;
+}
+  
+  input[type=text], select {
+    width: 100%;
+    padding: 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  ::placeholder {
+    color: #ccc;
+  }
+
+  /*Created a placeholder that shows in a lighter color and disappears immediately when clicked upon*/
+  #phoneNum:focus::placeholder {
+    opacity: 0;
+  }
+
+  /*Error messaging text for when the JS validations are triggered*/
+  span {
+    color: red; 
+    font-size: 14px; 
+    text-align: center;
+    margin: -15px;
+  }
+  
+  /*Button that is centered but not full width, and changes color upon hover*/
+  input[type=submit] {
+    width: 30%;
+    display: block;
+    background-color: #5f63d7;
+    color: white;
+    padding: 14px;
+    margin: 3px auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #4548a0;
+  }

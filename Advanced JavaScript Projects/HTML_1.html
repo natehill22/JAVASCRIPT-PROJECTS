@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="JavaScript/JavaScript_1.js" defer></script>
+</head>
+
+<body>
+    <h1>What is your favorite color?</h1>
+    <h3>Pick your favorite color from this list:</h3>
+    <ul style="li::marker {color: black;}">
+        <li style="background-color: #E73121; width: 250px;">Vermillion</li>
+        <li style="background-color: #DAA520; width: 250px;">Goldenrod</li>
+        <li style="background-color: #008080; width: 250px;">Teal</li>
+        <li style="background-color: #007BA7; width: 250px;">Cerulean</li>
+        <li style="background-color: #CA2C92; width: 250px;">Fuchsia</li>
+        <li style="background-color: #CC8899; width: 250px;">Puce</li>
+    </ul>
+    <h3>Enter your choice below:</h3>
+
+    <input id="Color_Input" type="text"> <!--Input for entering your favorite color-->
+    <button onclick="Color_Function()">Submit Color</button> <!--Push this button to run the function-->
+    <p id="Output"></p> <!--Output the function text here-->
+    <style>
+        /*Making the h1 an animated rainbow gradient*/
+        h1 {
+            font-family: arial black;
+            font-size: 35px;
+            background-image:
+                linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rainbow-animation 70s linear infinite;
+        }
+
+        @keyframes rainbow-animation {
+            to {
+                background-position: 4500vh;
+            }
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Running JavaScript in the Console</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <p id="globalVariables" onclick="global()">Global - click here</p>
+        <p id="localVariables" onclick="local()">Local - click here</p>
+        <hr>
+
+        <p id="concat" onclick="concatenate()">Click here for a concatenated sentence</p>
+        <hr>
+
+        <button onclick="newCourse()">Click here for new course</button>
+        <p id="displayCourse"></p>
+        <hr>
+
+        <p id="displayAge"></p>
+        <hr>
+        <h1 class="Click">This text will change!</h1>
+        <h3 class="Click">This text will not change.</h3>
+        <button onclick="Hello_World_function()">Clicks</button>
+        <hr>
+        <canvas id="myCanvas" width="500" height="350" style="border:2px dashed teal";></canvas>
+        <canvas id="myCanvas2" width="500" height="350" style="border:2px solid black";></canvas>
+        <script>
+            //a and b are global variables that can be edited in the console
+            let a = 3;
+            let b = 4;
+
+            function global() {
+                result = a + b;
+                document.getElementById("globalVariables").innerHTML = "Global variable a (" + a + ") plus global variable b (" + b + ") equals " + result;
+            }
+
+            function local() {
+                let c = 4;
+                let d = 3;
+                result = c + d;
+                document.getElementById("localVariables").innerHTML = "Local variable c (" + c + ") plus local variable d (" + d + ") equals " + result;
+            }
+
+            //Declare values for sentence1 and sentence2 in the console
+            let sentence1;
+            let sentence2;
+
+            function concatenate() {
+                //Concatenate sentence1 and sentence2 using the .concat() method
+                let concatSent = sentence1.concat(sentence2);
+
+                //Display result on webpage
+                document.getElementById("concat").innerHTML = concatSent;
+
+                //Display result in the console
+                console.log(concatSent);
+            }
+
+            //Creates a course object constructor
+            function Course(Name, Type, Duration) {
+                this.courseName = "Today's new course is: " + Name + "<br>";
+                this.courseType = "Type: " + Type + "<br>";
+                this.courseDur = "Course Length: " + Duration + " hours";
+            }
+
+            let js = new Course("JavaScript", "Code", 55);
+            let py = new Course("Python", "Code", 90);
+            
+            //Gets user input and calculates the age based on the year
+            let year = prompt("Type in the year you were born");
+            let yearNow = new Date().getFullYear();
+            let age = Math.floor(yearNow - year);
+
+            //Altering the text of the first class named element on the page
+            function Hello_World_function() {
+                var A = document.getElementsByClassName("Click");
+                A[0].innerHTML = "This text has changed.";
+            }
+            
+            //Drawing a circular gradient using JavaScript in the canvas
+            var c = document.getElementById("myCanvas"); //Connecting to the canvas item within the HTML
+            var ctx = c.getContext("2d"); //Setting the rendering context to 2d
+
+            //Defining the radial gradient
+            var grd = ctx.createRadialGradient(250, 175, 5, 250, 175, 225); //Creating the gradient and setting the center coordinates and radius for the start and end circle (x0, y0, r0 ,x1, y1, r1 where 0 = start and 1 = end)
+            grd.addColorStop(0, "green"); //Setting the color of the start (inner) circle
+            grd.addColorStop(1, "black"); //Setting the color of the end (outer) circle
+
+            ctx.fillStyle = grd; //Applying the gradient as the fill style
+            ctx.fillRect(0, 0, 500, 350); //Drawing the shape - fills a rectangle with the radial gradient
+
+
+            const canvas2 = document.getElementById("myCanvas2"); //Connecting to the canvas item within the HTML
+            const ctx2 = canvas2.getContext("2d"); //Setting the rendering context to 2d
+
+            //Defining the Gradient
+            const grd2 = ctx2.createLinearGradient(0, 0, 500, 350); //Creating the gradient and setting the coordinates for the start and end (x0, y0 ,x1, y1 where 0 = start and 1 = end)
+            grd2.addColorStop(0, "yellow"); //Setting the color of the start (inner) circle
+            grd2.addColorStop(1, "red"); //Setting the color of the end (outer) circle
+
+            ctx2.fillStyle = grd2; //Applying the gradient as the fill style
+            ctx2.fillRect(0, 0, 500, 350); //Drawing the shape - fills a rectangle with the radial gradient
+
+        </script>
+    </body>
+</html>

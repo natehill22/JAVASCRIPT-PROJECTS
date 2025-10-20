@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="CSS/CSS_1.css">
+    <script src="JavaScript/JavaScript_2.js" defer></script>
+</head>
+<body>
+    <!--Creating the contact form-->
+    <h2>Please leave your information, so we can contact you!</h2>
+    <form name="contactForm" onsubmit="return validateForm()">
+        <div class="form-container">
+            <div class="column"> 
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="firstname" value=""><br>
+                <span id="error1"></span><br> <!--Error messaging for validation, hidden initially-->
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" value=""><br>
+                <span id="error3"></span><br>
+            </div>
+            <div class="column">
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lastname" value=""><br>
+                <span id="error2"></span><br>
+                <label for="phoneNum">Phone Number:</label><br>
+                <input type="text" id="phoneNum" name="PhoneNumber" value="" placeholder="###-###-####"><br>
+                <span id="error4"></span><br>
+            </div>
+        </div>
+        <input type="Submit" value="Submit">
+    </form>
+</body>
+
+</html>

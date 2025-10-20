@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html langu="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <p id="pipe"></p>
+        <p id="displayAge"></p>
+        <script>
+            multTest = (x, y) => x * y;
+            document.getElementById("pipe").innerHTML = multTest(2, 11);
+
+            var ages = [2, 10, 18, 20, 13, 15, 30];
+            checkAge = (age) => age > 18; //Using arrow function to pass in a parameter of age
+            var adults = ages.filter(checkAge);
+            var hasAdult = ages.some(checkAge);
+            var allAdults = ages.every(checkAge);
+            document.getElementById("displayAge").innerHTML = "Some: " + hasAdult + " <br>All: " + allAdults + " <br> Ages above: " + adults; //Iterates through the array of ages and displays the result
+
+        </script>
+    </body>
+</html>
