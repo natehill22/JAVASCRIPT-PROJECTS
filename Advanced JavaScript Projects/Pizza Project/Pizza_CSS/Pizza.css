@@ -1,0 +1,94 @@
+body{
+    background-color: darkred;
+}
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: orange;
+    text-align: center;
+}
+
+h3{
+    font-family: fantasy;
+    color: burlywood;
+}
+
+.left h3, .center h3, .right h3{
+    text-align: center; /*Only center the headers in the list of inputs, so as to not look uneven while left-aligned*/
+}
+
+div{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: tomato;
+}
+
+#menuBG{
+    display: block;
+    width: 700px;
+    height: 470px;
+    margin: 10px auto;
+}
+
+#frmMenu{
+    margin: 0 auto;
+    text-align: center;
+    width: 625px;
+    height: 300px;
+}
+
+.left{
+    display: inline-block;
+    vertical-align: top; /*Forces the alignment across all inline elements to match, so the taller ones don't appear vertically higher*/
+    text-align: left;
+    width: 200px;
+    height: 300px; /*Increased height on these "lists" to allow the containers to contain all the inputs*/
+}
+
+.center{
+    display: inline-block;
+    vertical-align: top; /*Forces the alignment across all inline elements to match, so the taller ones don't appear vertically higher*/
+    text-align: left;
+    width: 200px;
+    height: 300px;
+}
+
+.right{
+    display: inline-block;
+    vertical-align: top; /*Forces the alignment across all inline elements to match, so the taller ones don't appear vertically higher*/
+    text-align: left;
+    width: 200px;
+    height: 300px;
+}
+
+#totalPrice{
+    width: 200px;
+    height: 250px; 
+    margin: 0 auto;
+    float: right; /*Positions an element to the right side of its containing element*/
+}
+
+#showText{
+    width: 200px;
+    height: 250px;
+    margin: 0px auto;
+    float: left; /*Positions an element to the left side of its containing element*/
+}
+
+#cart{
+    top: 0;
+    margin: 0px auto;
+    width: 400px;
+    height: 300px;
+}
+
+#btnOrder{
+    display: block;
+    margin: 30px auto;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(255, 193, 98);
+}
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: rgb(255, 193, 98);
+}
