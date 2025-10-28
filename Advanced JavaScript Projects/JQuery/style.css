@@ -27,28 +27,36 @@ h3 {
 /*HEADER SECTION*/
 
 .shine{
-    background-image: linear-gradient(0.15turn,
+    background-image: linear-gradient(0.15turn, /*Sets a linear gradient using the background image property. 0.15turn gives the gradient an angle of 54 degrees*/
     #000000 40%,
     #a8a8a8 50%,
-    #000000 60%);
-    background-clip: text;
+    #000000 60%); /*Giving the colors of the gradient. Each percentage tells where that color should stop--this has three with stop points incremented by 10 each, so this will look like a diagonal stripe*/
+    background-clip: text; /*Allows the elements background to by limited to the shape of its text content--hence the background is only visible through the existing letters*/
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; /*These two do the same as the background-clip above but for the Chrome browser*/
 }
 
 .header {
     padding-top: 150px;
     font-size: 150px;
-    transition: 0.5s ease;
+    transition: 0.5s ease; /*This will smoothly transition over 0.5 seconds from the header state to the header-scrolled state*/
 }
 
 .header-scrolled{
     font-size: 100px;
-    transition: 0.5s ease;
+    transition: 0.5s ease; /*This will smoothly transition over 0.5 seconds from the header-scrolled state to the header state*/
 }
 
 .car-title {
-    font-size: 30px
+    font-size: 30px;
+    display: none; /*Hides car image titles for show and hide jQuery effect*/
+}
+
+img{
+    width: 100%; /*Takes up 100% of the space in each column*/
+    height: auto; 
+    cursor: pointer;
+    box-shadow: 20px 20px 20px -9px rgba(60, 60, 60, 0.35), 10px 10px 10px -9px rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -68,4 +76,22 @@ h3 {
 .column {
     width: 33%;
     margin: 40px;
+}
+
+.faq{
+    width: 80%;
+    padding: 50px 100px 100px;
+    border: 2px solid black;
+    margin-bottom: 250px;
+}
+
+.question{
+    padding: 50px 20px;
+    border-bottom: 1px solid black; /*Creates a line between each question*/
+    cursor: pointer;
+}
+
+.answer{
+    display: none; /*Hides FAQ answer until user clicks the FAQ question*/
+    padding: 40px 20px;
 }

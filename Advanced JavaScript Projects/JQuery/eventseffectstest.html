@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JQuery Events/Effects Test</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <p>The place to click or hover.</p>
+    <br><br>
+    <p>My my!</p>
+    <br>
+    <p>What do you think?</p>
+  <script>
+    //Binding multiple events with different handlers on a paragraph tag
+    $( "p" ).on({
+        "click": function() { console.log( "clicked!" ); //When a paragraph tag is clicked, print the word "clicked!" to the console log
+            //$("p").fadeToggle(1500);
+        },
+        "mouseover": function() { console.log( "hovered!" ); 
+            $("p").css("color", "orange"); //When a paragraph tag is hovered over, all p tags should change color to orange and print the word "hovered!" to the console log
+        },
+        "mouseleave": function() { console.log( "left!" ); }, //When the mouse cursor leaves the paragraph tag, print the word "left!" to the console log
+        "mouseenter": function() { console.log( "entered!" ); }, //When the mouse cursor enters the paragraph tag, print the word "entered!" to the console log
+        "dblclick": function() { console.log( "double clicked!" ); //When a paragraph tag is double-clicked all p tags should slide up over 3 seconds and the phrase "double clicked!" should print to the console
+            $("p").slideUp(3000);
+        }
+    });
+  </script>
+</body>
+
+</html>
