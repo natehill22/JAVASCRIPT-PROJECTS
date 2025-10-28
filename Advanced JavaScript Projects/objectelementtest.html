@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <p id="test"></p>
+    <p id="test2"></p>
+    <script>
+        let url = document.URL;
+        document.getElementById("test").innerHTML = url;
+        const doctypeObj = document.doctype;
+        document.getElementById("test2").innerHTML = doctypeObj.name;
+        const comment = document.createComment("I have a lot to comment about");
+        document.body.appendChild(comment);
+        document.write("<h2>Hello World!</h2><p>Have a nice day!</p>");
+    </script>
+</body>
+
+</html>
