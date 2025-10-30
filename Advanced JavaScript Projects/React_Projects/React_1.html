@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="react.js"></script>
+        <script src="react-dom.js"></script>
+    </head>
+    <body>
+        <div id="My_React_Code"></div>
+        <script>
+            var Counter = React.createClass({ //creates component class
+                render: function() { //Render creates a snapshot of your component's current state and props and then uses that information to determine how to update the UI
+                    var time_Passed = Math.round(this.props.time_Passed / 100); //Sets 'time_Passed' to be an initial time value scaled down by a factor of 100, and then rounded to the nearest integer
+                    var seconds_Passed = time_Passed / 10 + (time_Passed % 10 ? '' : '.0' ); //Sets 'seconds_Passed' to be the value of 'time_Passed' divided by 10 and then added to its remainder in a ".3" format. If it doesn't have a value, it adds '.0'
+                    var text = 'My React code started running ' + seconds_Passed + ' seconds ago!'; //Sets the "text" variable to be the string with the seconds_Passed value showing within
+                    return React.DOM.p(null, text);
+                }
+            });
+
+            var counter_Factory = React.createFactory(Counter); //a function that generates a factory (object that can create other objects)
+
+            var start_Counting = new Date().getTime();
+            setInterval(function() { //method that evaluates an expression at specified intervals
+                ReactDOM.render( //used to render component or components
+                    counter_Factory({time_Passed: new Date().getTime() - start_Counting}),
+                    document.getElementById('My_React_Code') //Placing the 
+                );
+            }, 50);
+        </script>
+    </body>
+</html>
