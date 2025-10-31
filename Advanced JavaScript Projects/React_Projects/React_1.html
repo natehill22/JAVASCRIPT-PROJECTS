@@ -8,24 +8,26 @@
     <body>
         <div id="My_React_Code"></div>
         <script>
-            var Counter = React.createClass({ //creates component class
-                render: function() { //Render creates a snapshot of your component's current state and props and then uses that information to determine how to update the UI
+            var Counter = React.createClass({ //Sets 'Counter' to create a class component. Components serve the same purpose as JS functions (independent and reusable bits of code), but return HTML via the render function
+                render: function() { //Render creates a snapshot of the component's current state and props and then uses that information to output the HTML to the DOM
                     var time_Passed = Math.round(this.props.time_Passed / 100); //Sets 'time_Passed' to be an initial time value scaled down by a factor of 100, and then rounded to the nearest integer
-                    var seconds_Passed = time_Passed / 10 + (time_Passed % 10 ? '' : '.0' ); //Sets 'seconds_Passed' to be the value of 'time_Passed' divided by 10 and then added to its remainder in a ".3" format. If it doesn't have a value, it adds '.0'
-                    var text = 'My React code started running ' + seconds_Passed + ' seconds ago!'; //Sets the "text" variable to be the string with the seconds_Passed value showing within
-                    return React.DOM.p(null, text);
+                    var seconds_Passed = time_Passed / 10 + (time_Passed % 10 ? '' : '.0' ); //Sets 'seconds_Passed' to be the value of 'time_Passed' divided by 10 and then added to its remainder in a ".4" format. If it doesn't have a value, it adds '.0'
+                    var text = 'My React code started running ' + seconds_Passed + ' seconds ago!'; //Sets the "text" variable to be the string with the 'seconds_Passed' value showing within
+                    return React.DOM.p(null, text); //React.DOM.p is a function that creates a <p> element. The null arguement represents the props of the element--here, there are no special props or style being passed. 'text' represents the children of the element--it will be rendered as the content inside the tags.
                 }
             });
 
-            var counter_Factory = React.createFactory(Counter); //a function that generates a factory (object that can create other objects)
+            var counter_Factory = React.createFactory(Counter); //Sets 'counter_Factory' to a function that takes 'Counter' as an arguement and returns a React element. A factory in React is an object that can create other objects using props and children as arguments 
 
-            var start_Counting = new Date().getTime();
-            setInterval(function() { //method that evaluates an expression at specified intervals
-                ReactDOM.render( //used to render component or components
-                    counter_Factory({time_Passed: new Date().getTime() - start_Counting}),
-                    document.getElementById('My_React_Code') //Placing the 
+            var start_Counting = new Date().getTime(); //Creates a new date object which represents the current date and time at the moment of execution in milliseconds since the Unix epoch, and stores it in the 'start_Counting' variable. This time records the exact start time of the function and doesn't update
+            console.log(start_Counting);
+            setInterval(function() { //Runs this function every 0.05 seconds 
+                ReactDOM.render( //Renders components or React elements into the DOM
+                    counter_Factory({time_Passed: new Date().getTime() - start_Counting}), //Creates a new date object which represents the current date and time at the moment of execution in milliseconds since the Unix epoch and subtracts the previously saved 'start_Counting' value from it. Then runs the new object (time_Passed: numeric value) through the counterFactory function
+                    document.getElementById('My_React_Code') //Placing the value (text and numerical) into the HTML 'My_React_Code' p tag
                 );
             }, 50);
         </script>
     </body>
 </html>
+

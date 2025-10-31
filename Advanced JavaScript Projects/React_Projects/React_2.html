@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="like_button_container"></div>
+        <script>
+            const X = React.createElement; //Assigns the React createElement function to the new constant variable 'X'. This creates a React element which is a plain JS object describing what should be rendered to the DOM.
+
+            class likeButton extends React.Component { //Declares a new JS class 'likeButton' and signifies that it inherits from React.Component (this grants the likeButton class access to all the functionalities provided by React for building components including state and lifecycle methods). 
+                constructor(props) { //In React (specifically within class components), a constructor is a special method that's automatically called when an instance of a class component is created. It serves as the initial setup point for the component. It uses 'props' as its arguement. 
+                    super(props); //Required when using a constructor in a class component to call the parent (React.Component's) constructor. This should be called here or this.props in the constructor will be undefined.
+                    this.state = { liked: false }; //Initializing component's local state by assigning an object to this.state. The component data stored here is a boolean 'liked' that tracks whether a button has been clicked
+                }
+                render() { //This method is mandatory for class components. It returns the UI elements to be displayed
+                    if (this.state.liked) { //If 'this.state.liked' = true, the component will render the text below and exit the function
+                        return 'You clicked the like button!';
+                    }
+                    return X( //If 'this.state.liked' = false, use React.createElement to render a button
+                        'button', //Specifies what type of HTML element to create
+                        { onClick: () => this.setState({ liked: true }) }, //Prop object that attaches an onclick event handler to the button; when clicked, the component's state gets updated to 'liked: true' by calling 'this.setState', which triggers a re-render
+                        'Like' //Shows the text on the button; it's the child of the button
+                    );
+                }
+            }
+
+            const domContainer = document.querySelector('#like_button_container'); //Sets the 'domContainer' variable to equal the HTML element with a matching ID
+            ReactDOM.render(X(likeButton), domContainer); //Renders components or React elements into the DOM. In this case, it's the React createElement on the likeButton in the 'domContainer' ID in the HTML
+        </script>
+    </body>
+</html>
+

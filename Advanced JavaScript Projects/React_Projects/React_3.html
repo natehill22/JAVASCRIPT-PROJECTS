@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="JSX"></div>
+        <script type="text/babel">
+            class Greeting extends React.Component { //Declares a new JS class 'Greeting' and signifies that it inherits from React.Component (this grants the Greeting class access to all the functionalities provided by React for building components including state and lifecycle methods). 
+                render() { //This method is mandatory for class components. It returns the UI elements to be displayed; in this case, it's some text in an h1 heading
+                    return <h1>Mmmkay. Let's see if this shows, huh?</h1>
+                }
+            }
+
+            ReactDOM.render(<Greeting />, document.getElementById("JSX")) //Renders components or React elements into the DOM. In this case, it's the Greeting class upon the 'JSX' ID in the HTML
+        </script>
+    </body>
+</html>
+

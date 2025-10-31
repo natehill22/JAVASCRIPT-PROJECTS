@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            span{
+                font-size: small;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="testForm" onsubmit="return validateForm()">
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" name="phone" placeholder="###-###-####"><br>
+            <span id="PhoneError"></span><br><br> <!--Error messaging for validation, hidden initially-->
+            <input type="submit" value="Submit Number">
+        </form>
+
+        <script>
+            function validateForm() { //Creating variables that pull in the values given by the user in the HTML form
+                let phone = document.forms["testForm"]["phone"].value;
+
+                let isValid = true;
+
+                //Hides error messages so that they only show upon the proper conditions
+                document.getElementById("PhoneError").textContent = '';
+
+                const phoneRegex = /^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/; //Regex character sequence that ensures that an phone number format must be given
+                if (!phoneRegex.test(phone)) {
+                    document.getElementById('PhoneError').textContent = 'Phone Number needs proper formatting.';
+                    isValid = false;
+                }    
+
+                if (phone === "") { //Empty field validation for the phone number field
+                    document.getElementById('PhoneError').textContent = 'Phone Number cannot be empty.';
+                    isValid = false;    
+                }
+                return isValid;
+            }
+        </script>
+    </body>
+</html>
+

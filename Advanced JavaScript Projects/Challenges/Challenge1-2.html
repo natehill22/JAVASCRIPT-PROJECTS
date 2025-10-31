@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .fadeIn{
+                opacity: 0; /*Sets the opacity to invisible initially*/
+                animation: fadeAni 3s forwards; /*Uses the defined keyframes rule, duration and fill-mode. Forwards fill-mode ensures that the element retains the styles from the last keyframe (after the animation finishes)--allowing it to stay fully opaque*/
+            }
+
+            @keyframes fadeAni { /*Defines the keyframes for the fade-in animation*/
+                from {
+                    opacity: 0; /*Start with fully transparent*/
+                }
+                to {
+                    opacity: 1; /*End with fully opaque*/
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 class="fadeIn">Normal Size H1</h1>
+        <h1 class="fadeIn" style="font-size: 6vw;">Large Size H1</h1>
+        <h1 class="fadeIn" style="font-size: 16vw;">Extra Large Size H1</h1>
+        
+    </body>
+</html>
+
