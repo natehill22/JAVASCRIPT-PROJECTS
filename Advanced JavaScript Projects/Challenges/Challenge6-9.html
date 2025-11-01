@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <style>
+          html{
+            scroll-behavior: smooth;
+          }
+
+          /*Zooms in and out of all plain images on the page*/
+          @keyframes zoominout {
+            0% {
+              transform: scale(1, 1); /*Scales the element at its original unscaled size at 0%*/
+            }
+            50% {
+              transform: scale(1.5, 1.5); /*Scales the element 1.5 times horizontally and vertically in the middle of the animation*/
+            }
+            100% {
+              transform: scale(1, 1); /*Scales the element back to its original unscaled size at 100%*/
+            }
+          }
+
+          /*Moves the image header up with the growing/shrinking image*/
+          @keyframes moveUpDown {
+            0% {
+              transform: translateY(0); /*Starts at original position*/
+            }
+            50% {
+              transform: translateY(-140px); /*Move up 140 pixels*/
+            }
+            100% {
+              transform: translateY(0); /*Returns back to the original position*/
+            }
+          }
+
+          /*All images except the one in the slideshow will center and animate*/
+          section > img{
+            display: block;
+            margin: 20px auto; /*Centers the image*/
+            animation: zoominout 15s forwards; /*Animates the image to zoom (increase scale) in and out over 15 seconds once. Forward ensures that the element retains the styles from the last keyframe (after the animation finishes)--allowing it to stay at a normal scale after initial zoom in and out*/
+          }
+
+          h2{
+            text-align: center;
+            animation: moveUpDown 15s forwards;
+          }
+
+          /*Slideshow CSS*/
+          #slideshow{
+            margin: 200px auto;
+            position: relative;
+            width: 240px;
+            height: 240px;
+            padding: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+          }
+
+          #slideshow > div{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+          }
+
+          /*Popup Form*/
+          #popup *{
+            box-sizing: border-box;
+          }
+            
+          /*Center header text*/
+          h1 {
+            text-align: center;
+          }
+
+          /*Button used to open the contact form - fixed at the bottom of the page*/
+          .open-button {
+            background-color: #702f04;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: sticky;
+            bottom: 45px;
+            left: 84.25%;
+            width: 280px;
+          }
+
+          /*The popup form will be hidden by default*/
+          .form-popup {
+            display: none;
+            position: fixed;
+            bottom: 23px;
+            right: 5px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+          }
+
+          /*Add styles to the form container*/
+          .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+          }
+
+          /*Full width input fields*/
+          .form-container input[type=text], .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+          }
+
+          /*When the inputs get focus, alter color and remove outline*/
+          .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+          }
+
+          /*Set a style for the submit/login button*/
+          .form-container .btn {
+            background-color: #702f04;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+          }
+
+          /*Add a grey background color to the cancel button*/
+          .form-container .cancel {
+            background-color: rgb(99, 99, 99);
+          }
+
+          /*Add some hover effects to buttons*/
+          .form-container .btn:hover, .open-button:hover{
+            opacity: 1;
+          }
+        </style>
+    </head>
+    <body>
+      <nav>
+        <!--NAVBAR for jumping to bookmarks within this page-->
+        <h3>Click links to travel to parts of this page.</h3>
+        <a href="#pomelo">Pomelo</a><br>
+        <a href="#custardapple">Custard Apple</a><br>
+        <a href="#salak">Salak - Snakefruit</a><br>
+        <a href="#velvettamarind">Velvet Tamarind</a><br>
+        <a href="#slides">Slideshow</a><br>
+      </nav>
+      <!--Each section of fun fruit images is bookmarked-->
+      <section id="pomelo">
+        <h2>Pomelo</h2>
+        <img src="pomelo.jpg" alt="A very fine-looking pomelo">
+      </section>
+      <section id="custardapple">
+        <h2>Custard Apple</h2>
+        <img src="custardapple.jpg" alt="A delicious custard apple">
+      </section>
+      <section id="salak">
+        <h2>Salak - Snakefruit</h2>
+        <img src="salak-snakefruit.jpg" alt="An example of salak fruit">
+      </section>
+      <section id="velvettamarind">
+        <h2>Velvet Tamarind</h2>
+        <img src="velvettamarind.jpg" alt="The ellusive Velvet Tamarind">
+      </section>
+      <hr>
+      <section id="slides"> <!--SLIDESHOW section-->
+        <div id="slideshow">
+          <div>
+            .....uhhh. Hold on, please. Running into a problem here....you're gonna have to give me a minute.
+          </div>
+          <div>
+            ...errr..right...almost there...
+          </div>
+          <div>
+            <img src="finally.jpg" alt="An image that says 'Finally'" style="width: 240px; height: 240px;">
+          </div>
+          <div>
+            You're welcome. 
+          </div>
+        </div>
+      </section>
+      <button class="open-button" onclick="openForm()">Open Contact Form</button>
+      <section id="popup">
+        <!--A button to open the popup form-->
+        
+
+        <!--Form-->
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Enter Contact Info</h1>
+
+                <label for="fname"><b>First Name</b></label>
+                <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                <label for="lname"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <button type="submit" class="btn">Send Details</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+      </section>
+
+      <script>
+        $("#slideshow > div:gt(0)").hide(); //Hides all div elements with the 'slideshow' ID except for the very first one. :gt(0) is a JQuery filter that selects all elements except the first one (index 0)
+
+        setInterval(function() { //Repeatedly calls the function every 4 seconds
+          $('#slideshow > div:first') //Targets the first div element that is a child of the element with the slideshow ID
+          .fadeOut(3000) //Fades out over 3 seconds
+          .next() //Finds the immediately following sibling element
+          .fadeIn(3000) //Fades the new sibling element in over 3 seconds. The fade In and Out will overlap mildly
+          .end() //Reverts the selection back to the its previous state (#slideshow > div:first)
+          .appendTo('#slideshow'); //Takes the current selection (in #slideshow > div:first) and inserts it as the last child of the #slideshow element--resetting selection to the next item in the list
+        }, 4000);
+
+        //Popup forms functions
+        function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+            }
+      </script>
+    </body>
+</html>
+
+
