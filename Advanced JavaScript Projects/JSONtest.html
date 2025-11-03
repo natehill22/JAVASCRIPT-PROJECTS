@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <p id="myCheeseburgerJSON"></p>
+        <p id="myCheeseburgerObj"></p>
+        <p id="myCheeseburgerLocStor"></p>
+        <script>
+            var burger = {name: "Yes, Pleaseburger", toppings: "thirteen", taste: "maybe too much", flavor: "spicy, greasy, gooey, crunchy, savory, salty, and sharp"}; //Creates a variable that holds an dictionary object
+            var JSONstring = JSON.stringify(burger); //Converts JS objects to string format
+            document.getElementById("myCheeseburgerJSON").innerHTML = JSONstring; //Setting the HTML to show the value of the 'burger' dictionary object in string format
+            
+            var burgerOut = '{"name": "Yes, Pleaseburger", "toppings": "thirteen", "taste": "maybe too much", "flavor": "spicy, greasy, gooey, crunchy, savory, salty, and sharp"}'; //Creates a variable that holds a JSON string formatted dictionary object
+            var JSONstringOut = JSON.parse(burgerOut); //Converts string format to JS objects
+            document.getElementById("myCheeseburgerObj").innerHTML = JSONstringOut.name + " is " + JSONstringOut.flavor + "."; //Setting the HTML to show the value of the 'burgerOut' dictionary object
+
+            localStorage.setItem("taste", "maybe too much"); //Sets the data as a key value pair to be saved locally in your browser
+            document.getElementById("myCheeseburgerLocStor").innerHTML = localStorage.getItem("taste"); //Shows the locally saved data within the browser
+        </script>
+    </body>
+</html>

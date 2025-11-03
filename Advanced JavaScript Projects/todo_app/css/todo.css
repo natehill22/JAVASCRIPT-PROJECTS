@@ -40,3 +40,7 @@ footer{
     bottom: 0;
     border: 2px solid black;
 }
+
+.remove{
+    padding-bottom: 5px;
+}
