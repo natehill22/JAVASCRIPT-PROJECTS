@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Generate stuff using APIs</h1>
+        <button onclick="getCatFact()">Display a Cat Fact!</button>
+        <p id="catFactDisplay"></p>
+        <button onclick="getDogFact()">Display Dog Image!</button>
+        <p id="dogFactDisplay"></p>
+        <button onclick="getGunganText()">Display Gungan Text</button>
+        <p id="GunganDisplay"></p>
+        <script>
+            function getCatFact() {
+                fetch('https://catfact.ninja/fact') //Makes a request to the URL to get data
+                        .then(response => response.text()) //Handles the received data from the fetch and presents the content as plain text (useful if what is expected is JSON)
+                        .then(fact => { //Runs a function when fetch is successful to turn the response into text and to show it in the HTML
+                            const catFact = JSON.parse(fact);
+                            document.getElementById('catFactDisplay').innerHTML = catFact.fact;
+                        })
+                        .catch(error => { //Runs a function if there's an error with the fetch request. It's to pipe error messaging to the HTML
+                            document.getElementById('catFactDisplay').textContent = "Error fetching fact."
+                        });
+            }
+            function getDogFact() {
+                fetch('https://dog.ceo/api/breeds/image/random') //Makes a request to the URL to get data
+                        .then(response => response.text()) //Handles the received data from the fetch and presents the content as plain text (useful if what is expected is JSON)
+                        .then(message => { //Runs a function when fetch is successful to turn the response into text and to show it in the HTML
+                            const dogFact = JSON.parse(message);
+                            document.getElementById('dogFactDisplay').innerHTML = "<img src=" + dogFact.message + " alt=\"A random dog selection\">";
+                        })
+                        .catch(error => { //Runs a function if there's an error with the fetch request. It's to pipe error messaging to the HTML
+                            document.getElementById('dogFactDisplay').textContent = "Error fetching fact."
+                        });
+            }
+            function getGunganText() {
+                fetch('https://api.funtranslations.com/translate/gungan.json?text=This%20may%20in%20fact%20be%20the%20worst%20thing%20on%20the%20internet') //Makes a request to the URL to get data
+                        .then(response => response.text()) //Handles the received data from the fetch and presents the content as plain text (useful if what is expected is JSON)
+                        .then(contents => { //Runs a function when fetch is successful to turn the response into text and to show it in the HTML
+                            const GunganPhrase = JSON.parse(contents);
+                            document.getElementById('GunganDisplay').innerHTML = GunganPhrase.contents.translated;
+                        })
+                        .catch(error => { //Runs a function if there's an error with the fetch request. It's to pipe error messaging to the HTML
+                            document.getElementById('GunganDisplay').textContent = "Error fetching fact."
+                        });
+            }
+        </script>
+    </body>
+</html>
