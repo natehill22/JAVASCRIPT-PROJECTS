@@ -8,7 +8,7 @@ This repository is for my (Nathaniel Hill's) Tech Academy JavaScript projects. T
 - [JQuery - Classic cars](/Advanced%20JavaScript%20Projects/JQuery)
 - [Pizza Drill](/Advanced%20JavaScript%20Projects/Pizza%20Project)
 - [NumberAPItest](/Advanced%20JavaScript%20Projects/NumbersAPItest.html)
-- [JS-Form-Validations - HTML2](/Advanced%20JavaScript%20Projects/HTML_2)
+- [JS-Form-Validations - HTML2](/Advanced%20JavaScript%20Projects/JS-Form-Validations%20(HTML2))
 - [Project 7 - Basic](/Basic%20JavaScript%20Projects/Project7_scope_time_function)
 - [React Counter](/Advanced%20JavaScript%20Projects/React_Projects/React_1.html)
 
