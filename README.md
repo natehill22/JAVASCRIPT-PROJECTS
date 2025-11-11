@@ -1,5 +1,3 @@
-This page is a work in progress. It is not currently finished.
-
 # JAVASCRIPT-PROJECTS
 This repository is for my (Nathaniel Hill's) Tech Academy JavaScript projects. The projects within this folder were used primarily for learning and practicing new JavaScript concepts (including AJAX, JQuery, React, API fetches, etc.).
 
