@@ -26,7 +26,7 @@ function getReceipt() {
     }
     runningTotal = sizeTotal; //Defining runningTotal and giving it the value of sizeTotal
     console.log(selectedSize+" = $"+sizeTotal+".00"); //Shows the selected Pizza Size and its Price Amount in the console
-    console.log("size text1: "+text1); //Shows value of text 1 (should be header and pizza selection) in the console
+    console.log("size text1: "+text1); //Shows value of text1 (should be header and pizza selection) in the console
     console.log("subtotal: $"+runningTotal+".00"); //Shows the current running total in the console
     
     getTopping(runningTotal, text1); //Calling this function at the end of the getReceipt function and passing runningTotal and text1 as its paramaters
