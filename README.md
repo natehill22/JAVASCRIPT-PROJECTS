@@ -17,7 +17,7 @@ This repository is for my (Nathaniel Hill's) Tech Academy JavaScript projects. T
 This page is the culmination of all the HTML, CSS, and JavaScript learning I've done so far. It is an active portfolio webpage for me as a developer. I've updated it with JavaScript to include a slideshow, navigation buttons and image-representative dots (also to help with slideshow navigation), and a PopUp contact form. Much work was also done to make it mobile friendly. 
 
 ## TicTacToe
-In this project, I made a working TicTacToe game using a combination of HTML, CSS, and JavaScript. Functions, conditional statements, loops, audio, and the HTML canvas were all used to complete this game.  
+In this project, I made a working TicTacToe game using a combination of HTML, CSS, and JavaScript. Functions, conditional statements, loops, audio, and the HTML canvas were all used to complete this game. The computer chooses which tile to select randomly, so it's not the most intelligent opponent but it's still fun.
 
 ## Calculator
 In this lesson, I learned how to use JavaScript with HTML and CSS to make a calculator. I used many functions, event listeners, conditional statements and variables to create the many functionalities expected of a calculator (clearing, decimals, adding, subtract, multiplication, division, recognizing button clicks, keeping track of values, updating the display, etc.. 
