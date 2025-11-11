@@ -7,16 +7,16 @@ This repository is for my (Nathaniel Hill's) Tech Academy JavaScript projects. T
 - [Student Portfolio](https://natehill22.github.io/)
   
 ## JavaScript Projects
-- [Project 7](/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project7_scope_time_function)
-- [HTML2](/JAVASCRIPT-PROJECTS/tree/main/Advanced%20JavaScript%20Projects/HTML_2)
-- [NumberAPItest](/JAVASCRIPT-PROJECTS/blob/main/Advanced%20JavaScript%20Projects/NumbersAPItest.html)
-- [TicTacToe](/JAVASCRIPT-PROJECTS/tree/main/Advanced%20JavaScript%20Projects/TicTacToe)
-- [Pizza Drill](/JAVASCRIPT-PROJECTS/tree/main/Advanced%20JavaScript%20Projects/Pizza%20Project)
-- [React_1?](/JAVASCRIPT-PROJECTS/blob/main/Advanced%20JavaScript%20Projects/React_Projects/React_1.html)
-- [JQuery Classic cars](/JAVASCRIPT-PROJECTS/blob/main/Advanced%20JavaScript%20Projects/JQuery/index.html)
-- [Calculator](/JAVASCRIPT-PROJECTS/tree/main/Advanced%20JavaScript%20Projects/Calculator)
-- [Challenges4-5](/JAVASCRIPT-PROJECTS/blob/main/Advanced%20JavaScript%20Projects/Challenges/Challenge4-5.html)
-- [Challenges6-9](/JAVASCRIPT-PROJECTS/blob/main/Advanced%20JavaScript%20Projects/Challenges/Challenge6-9.html)
+- [Project 7](/Basic%20JavaScript%20Projects/Project7_scope_time_function)
+- [HTML2](/Advanced%20JavaScript%20Projects/HTML_2)
+- [NumberAPItest](/Advanced%20JavaScript%20Projects/NumbersAPItest.html)
+- [TicTacToe](/Advanced%20JavaScript%20Projects/TicTacToe)
+- [Pizza Drill](/Advanced%20JavaScript%20Projects/Pizza%20Project)
+- [React_1?](/Advanced%20JavaScript%20Projects/React_Projects/React_1.html)
+- [JQuery Classic cars](/Advanced%20JavaScript%20Projects/JQuery/index.html)
+- [Calculator](/Advanced%20JavaScript%20Projects/Calculator)
+- [Challenges4-5](/Advanced%20JavaScript%20Projects/Challenges/Challenge4-5.html)
+- [Challenges6-9](/Advanced%20JavaScript%20Projects/Challenges/Challenge6-9.html)
 
 
 ## Student Portfolio
