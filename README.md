@@ -4,11 +4,17 @@ This repository is for my (Nathaniel Hill's) Tech Academy JavaScript projects. T
 ## Projects:
 - [Student Portfolio](https://natehill22.github.io/)
   
-## Basic JavaScript Projects
-- Project 7
-- 
-- [Grace Hopper Project](/Basic_HTML_and_CSS/Grace%20Hopper/HTML%20CSS)
-
+## JavaScript Projects
+- [Project 7](/JAVASCRIPT-PROJECTS/tree/main/Basic%20JavaScript%20Projects/Project7_scope_time_function)
+- [HTML2]()
+- [NumberAPItest]()
+- [TicTacToe]()
+- [Pizza Drill]()
+- [React_1?]()
+- [JQuery Classic cars]()
+- [Calculator]()
+- [Challenges4-5]()
+- [Challenges6-9]()
 
 
 ## Student Portfolio
