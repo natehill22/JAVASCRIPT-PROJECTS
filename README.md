@@ -5,7 +5,7 @@ This repository is for my (Nathaniel Hill's) Tech Academy JavaScript projects. T
 - [Student Portfolio](https://natehill22.github.io/)
 - [TicTacToe](/Advanced%20JavaScript%20Projects/TicTacToe)
 - [Calculator](/Advanced%20JavaScript%20Projects/Calculator)
-- [JQuery - Classic cars](/Advanced%20JavaScript%20Projects/JQuery/index.html)
+- [JQuery - Classic cars](/Advanced%20JavaScript%20Projects/JQuery)
 - [Pizza Drill](/Advanced%20JavaScript%20Projects/Pizza%20Project)
 - [NumberAPItest](/Advanced%20JavaScript%20Projects/NumbersAPItest.html)
 - [JS-Form-Validations - HTML2](/Advanced%20JavaScript%20Projects/HTML_2)
