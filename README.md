@@ -13,8 +13,6 @@ This repository is for my (Nathaniel Hill's) Tech Academy JavaScript projects. T
 - [React_1?](/Advanced%20JavaScript%20Projects/React_Projects/React_1.html)
 - [JQuery Classic cars](/Advanced%20JavaScript%20Projects/JQuery/index.html)
 - [Calculator](/Advanced%20JavaScript%20Projects/Calculator)
-- [Challenges4-5](/Advanced%20JavaScript%20Projects/Challenges/Challenge4-5.html)
-- [Challenges6-9](/Advanced%20JavaScript%20Projects/Challenges/Challenge6-9.html)
 
 
 ## Student Portfolio
