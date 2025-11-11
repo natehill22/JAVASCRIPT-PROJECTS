@@ -1,5 +1,5 @@
 # JAVASCRIPT-PROJECTS
-This repository is for my (Nathaniel Hill's) Tech Academy JavaScript projects. The projects within this folder were used primarily for learning and practicing new JavaScript concepts (including AJAX, JQuery, React, API fetches, etc.).
+This repository is for my (Nathaniel Hill's) Tech Academy JavaScript projects. The projects within this folder were used primarily for learning and practicing new JavaScript concepts (including AJAX, JQuery, React, JSX, API fetches, etc.).
 
 ## Projects:
 - [Student Portfolio](https://natehill22.github.io/)
