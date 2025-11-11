@@ -51,6 +51,8 @@ function coinFlip() {
     Guess = document.getElementById("Guess").value;
     if (Guess.toLowerCase() === HorT.toLowerCase()) { //Comparing the users guess with the previously assigned "Heads/Tails values"
         document.getElementById("GuessVerif").innerHTML = "Congratulations! You've won!!"; //If the user's guess matches the coin flip, the HTML document will show a success message
+    } else if (Guess.toLowerCase() !== "tails" && Guess.toLowerCase() !== "heads") {
+        document.getElementById("GuessVerif").innerHTML = "Be sure to check your spelling!! Try again!"; //If the user's guess doesn't match the string "heads" or "tails", the HTML document shows a specific failure message to correct input
     } else {
         document.getElementById("GuessVerif").innerHTML = "Better luck next time!! Try again!"; //If the user's guess doesn't match the coin flip, the HTML document shows a failure message
     }

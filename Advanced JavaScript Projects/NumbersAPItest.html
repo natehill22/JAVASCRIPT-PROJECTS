@@ -35,7 +35,7 @@
                         });
             }
             function getGunganText() {
-                fetch('https://api.funtranslations.com/translate/gungan.json?text=This%20may%20in%20fact%20be%20the%20worst%20thing%20on%20the%20internet') //Makes a request to the URL to get data
+                fetch('https://api.funtranslations.com/translate/gungan.json?text=I%20think%20I\'m%20already%20regretting%20my%20decisions%20here') //Makes a request to the URL to get data
                         .then(response => response.text()) //Handles the received data from the fetch and presents the content as plain text (useful if what is expected is JSON)
                         .then(contents => { //Runs a function when fetch is successful to turn the response into text and to show it in the HTML
                             const GunganPhrase = JSON.parse(contents);
