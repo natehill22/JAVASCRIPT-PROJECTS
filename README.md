@@ -3,19 +3,21 @@ This repository is for my (Nathaniel Hill's) Tech Academy JavaScript projects. T
 
 ## Projects:
 - [Student Portfolio](https://natehill22.github.io/)
+  
+## Basic JavaScript Projects
+- Project 7
 - 
-- [Academy Cinemas](/Basic_HTML_and_CSS/Academy-Cinemas)
-- [Album Challenge (BootStrap)](/Basic_HTML_and_CSS/Introduction-to-Bootstrap)
-- [HTML Challenges](/Basic_HTML_and_CSS/HTML%20Challenges)
-- [Simple Recipes](/Basic_HTML_and_CSS/Simple-Recipes)
-- [The Pet Shop](/Basic_HTML_and_CSS/The_Pet_Shop_Website)
-- [One Page Website](/Basic_HTML_and_CSS/One-Page%20Website)
 - [Grace Hopper Project](/Basic_HTML_and_CSS/Grace%20Hopper/HTML%20CSS)
 
 
 
 ## Student Portfolio
-This page is the culmination of all the HTML, CSS, and JavaScript learning I've done so far. It is an active portfolio webpage for me as a developer. I've updated it with JavaScript to include a slideshow, navigation buttons and image-representative dots (also to help with slideshow navigation) and a PopUp contact form. Much work was also done to make it mobile friendly. 
+This page is the culmination of all the HTML, CSS, and JavaScript learning I've done so far. It is an active portfolio webpage for me as a developer. I've updated it with JavaScript to include a slideshow, navigation buttons and image-representative dots (also to help with slideshow navigation), and a PopUp contact form. Much work was also done to make it mobile friendly. 
+
+## Project 7 (Basic)
+This page, while barebones, introduced us to using JavaScript to perform math and requested I make use of new (to me) concepts like new Date() and Math.random(). I had a lot of fun with these projects and ended up making a function that returns a random number and conditional answers based upon where it is in reference to 5, several time-based functions that alter based upon the time of day that you interact with them, and a Coin Flip function that you can play over and over again and even utilizes some validations. 
+
+
 
 ## Academy Cinemas
 This page is an example movie website that utilized Bootstrap. It contains many Bootstrap elements and custom adjustments including form, cards, drowdowns, navbar, footer and internal links. 
