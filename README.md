@@ -2,7 +2,6 @@
 This repository is for my (Nathaniel Hill's) Tech Academy JavaScript projects. The projects within this folder were used primarily for learning and practicing new JavaScript concepts (including AJAX, JQuery, React, JSX, API fetches, etc.).
 
 ## Projects:
-- [Student Portfolio](https://natehill22.github.io/)
 - [TicTacToe](/Advanced%20JavaScript%20Projects/TicTacToe)
 - [Calculator](/Advanced%20JavaScript%20Projects/Calculator)
 - [JQuery - Classic cars](/Advanced%20JavaScript%20Projects/JQuery)
@@ -12,9 +11,6 @@ This repository is for my (Nathaniel Hill's) Tech Academy JavaScript projects. T
 - [Project 7 - Basic](/Basic%20JavaScript%20Projects/Project7_scope_time_function)
 - [React Counter](/Advanced%20JavaScript%20Projects/React_Projects/React_1.html)
 
-
-## Student Portfolio
-This page is the culmination of all the HTML, CSS, and JavaScript learning I've done so far. It is an active portfolio webpage for me as a developer. I've updated it with JavaScript to include a slideshow, navigation buttons and image-representative dots (also to help with slideshow navigation), and a PopUp contact form. Much work was also done to make it mobile friendly. 
 
 ## TicTacToe
 In this project, I made a working TicTacToe game using a combination of HTML, CSS, and JavaScript. Functions, conditional statements, loops, audio, and the HTML canvas were all used to complete this game. The computer chooses which tile to select randomly, so it's not the most intelligent opponent but it's still fun.
